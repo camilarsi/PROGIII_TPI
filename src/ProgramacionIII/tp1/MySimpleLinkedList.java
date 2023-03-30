@@ -10,6 +10,7 @@ public class MySimpleLinkedList<T> {
 		this.size = 0;
 	}
 	
+	
 	public void insertFront(T info) {
 		Node<T> tmp = new Node<T>(info,null);
 		tmp.setNext(this.first);
