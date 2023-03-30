@@ -1,0 +1,10 @@
+Computational Complexity List Vs. Array:
+
+Operation			List			Array
+------------------------------------------
+Insert at 0			O(1)			O(n)
+
+get(index)			O(n)			O(1)
+
+size				O(1)			O(n)
+
