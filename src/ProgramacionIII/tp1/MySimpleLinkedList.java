@@ -78,4 +78,28 @@ public class MySimpleLinkedList<T> {
 		}
 		return null;
 	}
+	
+	public int indexOf(T o) {
+		//cast o to Node<T> or return -1
+		try {
+			Node<T> toFind = (Node<T>)o;
+			Node<T> tem = this.first; // temporal Node to iterate for
+			int i = 0; //positions iterated accountant
+			//while tem info and the one to be found info does not match, and exists a next from tem:
+			while(tem.getInfo() != toFind.getInfo() && tem.getNext()!=null) {
+				//increase tem
+				tem = tem.getNext();
+				//increase position accountant
+				i++;
+			}
+			//if accountant exceeds size return -1 because it wasn´t found
+			if(i > this.size) {
+				return -1;
+			}
+			// return position iterated
+			return i;
+		}catch (Exception e) {
+			return -1;
+		}
+	}
 }
