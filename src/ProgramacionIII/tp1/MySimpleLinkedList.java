@@ -1,6 +1,7 @@
 package ProgramacionIII.tp1;
 
-public class MySimpleLinkedList<T> {
+
+public class MySimpleLinkedList<T> implements Iterable<Object> {
 
 	private Node<T> first;
 	private int size;
@@ -102,4 +103,11 @@ public class MySimpleLinkedList<T> {
 			return -1;
 		}
 	}
+	
+	@Override
+	public Iterator iterator() {
+		Iterator i = new Iterator(this.first); 
+		return i;
+	}
+	
 }
